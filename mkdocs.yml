@@ -1,0 +1,29 @@
+site_name: Algebraic Topology
+site_description: Notes of a course in NTHU, 2026 Fall (Massey, A Basic Course in Algebraic Topology)
+site_url: https://skyy0408.github.io/Algebraic-Topology/
+repo_url: https://github.com/Skyy0408/Algebraic-Topology
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: indigo
+      toggle: {icon: material/weather-sunny, name: Light mode}
+    - scheme: default
+      primary: indigo
+      toggle: {icon: material/weather-night, name: Dark mode}
+  features: [navigation.sections, toc.follow, content.code.copy]
+markdown_extensions:
+  - pymdownx.arithmatex: {generic: true}
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc: {permalink: true}
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+extra_css:
+  - stylesheets/extra.css
+nav:
+  - Home: index.md
+  - "Ch. 1 Surfaces": ch01-surfaces.md

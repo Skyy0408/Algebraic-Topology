@@ -11,9 +11,13 @@ source_pages: "handwritten notes p.1–13"
 **Examples (compact).**
 
 - $S^2$, the 2-dimensional sphere:
-  $$S^2 = \{x \in \mathbb{R}^3 \mid \|x\| = 1\}.$$
+
+    $$S^2 = \{x \in \mathbb{R}^3 \mid \|x\| = 1\}.$$
+
 - $T^2$, the 2-dimensional torus, the surface of revolution of a circle $C$:
-  $$\left(\sqrt{x^2+y^2} - 1\right)^2 + z^2 = \frac14.$$
+
+    $$\left(\sqrt{x^2+y^2} - 1\right)^2 + z^2 = \frac14.$$
+
 - The double torus, triple torus, …: the equations are not "simple" enough.
 
 <!-- FIG: sphere, torus, double torus, triple torus -->
@@ -31,7 +35,8 @@ Roughly speaking, a surface is a set (geometric object) which locally looks like
 
 1. $M^n$ is a Hausdorff space (i.e. a topological space satisfying the $T_2$-axiom);
 2. $\forall x \in M^n$, $\exists\, U$ a neighborhood of $x$ such that $U$ is homeomorphic to
-   $$B^n = \{x \in \mathbb{R}^n \mid \|x\| < 1\}.$$
+
+    $$B^n = \{x \in \mathbb{R}^n \mid \|x\| < 1\}.$$
 
 Unless specified otherwise, we also assume
 
@@ -78,7 +83,7 @@ T^2 = S^1 \times S^1 \cong [0,1]\times[0,1]/\sim,
 \end{cases}
 $$
 
-<!-- FIG: square with both pairs of opposite edges identified → cylinder → torus -->
+<video class="anim" src="assets/animations/Torus.mp4" controls loop muted autoplay playsinline></video>
 
 **Open sets.** An open set of the quotient is represented in the square by: an open disk in the interior; two half-disks on a pair of identified edges; four quarter-disks at the four corners (all corners are one point).
 
@@ -91,7 +96,9 @@ We can generalize this example by identifying different edges:
 - one pair of opposite edges identified with the **same** direction → **cylinder**;
 - one pair of opposite edges identified with **opposite** directions → **Möbius band**.
 
-<!-- FIG: cylinder and Möbius band from a square -->
+<video class="anim" src="assets/animations/Cylinder.mp4" controls loop muted autoplay playsinline></video>
+
+<video class="anim" src="assets/animations/MobiusBand.mp4" controls loop muted autoplay playsinline></video>
 
 ## 1.2 The real projective plane
 
@@ -121,8 +128,9 @@ $$
 
 which is a square (bigon) whose boundary is read as $aa$. This can be visualized by "cut and glue".
 
-<!-- FIG: hemisphere → disk with antipodal boundary identification → square with edges a, a -->
-<!-- ANIM candidate: hemisphere flattening to disk, then to the square -->
+<video class="anim" src="assets/animations/ProjectivePlane.mp4" controls loop muted autoplay playsinline></video>
+
+The last step cannot be done in $\mathbb{R}^3$ without self-intersection: $\mathbb{RP}^2$ does not embed in $\mathbb{R}^3$. The animation shows the cross-cap immersion.
 
 ## 1.3 Connected sums
 
@@ -160,6 +168,10 @@ Since $\mathbb{RP}^2 \setminus D$ is a Möbius band, $K$ is a union of two Möbi
 Again, we can express $K$ as a polygon with edges properly identified: take $P_1 \cong \mathbb{RP}^2 \cong P_2$ (disks with boundaries $a_1a_1$ and $a_2a_2$), cut out the small disks $c_1, c_2$, and glue along $c$. After cutting along a diagonal and regluing, the result is the square in which one pair of opposite edges is identified with the same direction and the other pair with opposite directions.
 
 <!-- FIG: the sequence of polygons on p.4 (P1, P2 → square → ... → Klein bottle square) -->
+
+<video class="anim" src="assets/animations/KleinBottle.mp4" controls loop muted autoplay playsinline></video>
+
+As with $\mathbb{RP}^2$, $K$ does not embed in $\mathbb{R}^3$; the animation shows the figure-8 immersion.
 <!-- ANIM candidate: RP^2 # RP^2 → Klein bottle square -->
 
 To express $K$ as gluing two Möbius bands: cut the Klein-bottle square along two horizontal lines $c, d$. The middle strip (edges $c$, $d$, sides $b$, $b$) is a Möbius band; the top and bottom strips glue along $a$ into another Möbius band (edges $d$, $c$, sides $e, f$).
@@ -179,11 +191,15 @@ $\Rightarrow$ the topological types of surfaces under $\#$ form an abelian semig
 **Definition.**
 
 - Given topological spaces $X, Y$ and a surjection $p : X \to Y$, we say $p$ is a *quotient map* if
-  $$U \subseteq Y \text{ is open} \iff p^{-1}(U) \subseteq X \text{ is open}.$$
+
+    $$U \subseteq Y \text{ is open} \iff p^{-1}(U) \subseteq X \text{ is open}.$$
+
 - Let $X$ be a topological space, $A$ a set, and $p : X \to A$ surjective. The *quotient topology* on $A$ is the unique topology such that $p$ is a quotient map.
 - Let $X^*$ be a partition of $X$, i.e. a collection of disjoint subsets of $X$ whose union is $X$. Consider
-  $$p : X \to X^*, \qquad p(x) = [x] \in X^* \text{ with } x \in [x].$$
-  If $X$ is a topological space, then $X^*$ with the quotient topology is called the *quotient space*.
+
+    $$p : X \to X^*, \qquad p(x) = [x] \in X^* \text{ with } x \in [x].$$
+
+    If $X$ is a topological space, then $X^*$ with the quotient topology is called the *quotient space*.
 
 **Example.** $\mathbb{RP}^2 = S^2/\{\text{antipodal points}\}$:
 $X = S^2$, $X^* = \{\{x, -x\} : x \in S^2\}$. $\mathbb{RP}^2$ is the quotient space of $S^2$ with quotient map $p(x) = \{x, -x\}$.
@@ -209,17 +225,22 @@ $$
 
 1. $\mathbb{RP}^2 \# \mathbb{RP}^2 \# \mathbb{RP}^2 \cong K \# \mathbb{RP}^2$: word $a_1a_1a_2a_2a_3a_3$.
 2. $T^2 \# T^2$:
-   $$a_1 b_2 a_2^{-1} b_2^{-1} a_2 b_1 a_1^{-1} b_1^{-1} \;\cong\; a_1 b_1 a_1^{-1} b_1^{-1} a_2 b_2 a_2^{-1} b_2^{-1}.$$
-   Why are the two words equivalent? We need some "algebraic rules" for these symbolic sequences.
+
+    $$a_1 b_2 a_2^{-1} b_2^{-1} a_2 b_1 a_1^{-1} b_1^{-1} \;\cong\; a_1 b_1 a_1^{-1} b_1^{-1} a_2 b_2 a_2^{-1} b_2^{-1}.$$
+
+    Why are the two words equivalent? We need some "algebraic rules" for these symbolic sequences.
 3. $S^2$: $aa^{-1}$.
 4. $T^2 \# \cdots \# T^2 = nT^2$: $a_1b_1a_1^{-1}b_1^{-1}\,a_2b_2a_2^{-1}b_2^{-1}\cdots a_nb_na_n^{-1}b_n^{-1}$ (polygon with $4n$ edges).
 5. $\mathbb{RP}^2 \# \cdots \# \mathbb{RP}^2 = n\mathbb{RP}^2$: $a_1a_1a_2a_2\cdots a_na_n$ (polygon with $2n$ edges).
 
-<!-- FIG: polygons for examples 1–3 -->
+<!-- FIG: polygons for examples 1–2 -->
+
+<video class="anim" src="assets/animations/Sphere.mp4" controls loop muted autoplay playsinline></video>
 
 ## 1.4 Classification theorem
 
 > **Classification Theorem for Compact Connected Surfaces.** Any compact connected surface is homeomorphic to either
+>
 > $$S^2, \quad nT^2, \quad \text{or} \quad n\mathbb{RP}^2 \quad \text{for some } n \in \mathbb{N}.$$
 
 ### Triangulations
@@ -284,8 +305,8 @@ $g$ is called the *genus* of the surface.
 Let $\{T_1, T_2, \dots, T_n\}$ be a triangulation of a compact surface. We can order them so that $T_k$ has an edge in common with at least one of $T_1, \dots, T_{k-1}$:
 
 - Pick an arbitrary $T_1$.
-- Choose $T_2$ with $T_1 \cap T_2 = $ an edge.
-- Choose $T_3$ with $T_1 \cap T_3$ or $T_2 \cap T_3 = $ an edge.
+- Choose $T_2$ such that $T_1 \cap T_2$ is an edge.
+- Choose $T_3$ such that $T_1 \cap T_3$ or $T_2 \cap T_3$ is an edge.
 - Continue until no such $T_k$ can be found.
 
 If this stops before all triangles are used, we get $\{T_1,\dots,T_{k-1}\}$ and $\{T_k,\dots,T_n\}$ that meet in at most vertices; near such a vertex the surface is not locally $\mathbb{R}^2$, contradicting connectedness / the manifold condition.
@@ -305,11 +326,14 @@ In a word, a pair of edges is of the
 
 1. **Eliminate adjacent edges of the 1st kind:** $\cdots a a^{-1} \cdots$ can be folded away.
 2. **Single vertex:** cut along a diagonal $c$ and reglue along $a$; this gives one fewer $P$-type vertex and one more $Q$-type vertex.
-   Repeat 1 and 2 to eliminate all $P$-type vertices.
+    Repeat 1 and 2 to eliminate all $P$-type vertices.
 3. **Make pairs of the 2nd kind adjacent:**
-   $$A\,b\,B\,b\,C \;\longrightarrow\; A\,B^{-1}\,a\,a\,C.$$
+
+    $$A\,b\,B\,b\,C \;\longrightarrow\; A\,B^{-1}\,a\,a\,C.$$
+
 4. **Assume there are 2 pairs of edges of the 1st kind.** Then there is a pair of the 1st kind which separates such a pair:
-   $$A\,a\,B\,b^{-1}\,C\,a^{-1}\,D\,b\,E \;\longrightarrow\; A\,a\,c\,a^{-1}\,D\,C\,c^{-1}\,B\,E \;\longrightarrow\; A\,D\,C\,d\,c\,d^{-1}\,c^{-1}\,B\,E.$$
+
+    $$A\,a\,B\,b^{-1}\,C\,a^{-1}\,D\,b\,E \;\longrightarrow\; A\,a\,c\,a^{-1}\,D\,C\,c^{-1}\,B\,E \;\longrightarrow\; A\,D\,C\,d\,c\,d^{-1}\,c^{-1}\,B\,E.$$
 
 <!-- FIG: surgery steps 1–4 -->
 <!-- ANIM candidate: step 3 and step 4 cut-and-glue -->
@@ -326,7 +350,8 @@ Sketch: $T^2 \# \mathrm{MB}$ and $K \# \mathrm{MB}$ both reduce to the same squa
 1. If all pairs are of the 1st type: $a_1b_1a_1^{-1}b_1^{-1}\,a_2b_2a_2^{-1}b_2^{-1}\cdots a_nb_na_n^{-1}b_n^{-1}$, a connected sum $nT^2$.
 2. If all pairs are of the 2nd type: $a_1a_1a_2a_2\cdots a_na_n$, a connected sum $n\mathbb{RP}^2$.
 3. If both types occur, apply the lemma to keep only 2nd-type pairs. E.g.
-   $$A\,\underbrace{a_1a_1\,a_2b_2a_2^{-1}b_2^{-1}}_{\mathbb{RP}^2 \# T^2}\,B \;\cong\; A\,\underbrace{a_1a_1a_2a_2a_3a_3}_{3\mathbb{RP}^2}\,B. \qquad\blacksquare$$
+
+    $$A\,\underbrace{a_1a_1\,a_2b_2a_2^{-1}b_2^{-1}}_{\mathbb{RP}^2 \# T^2}\,B \;\cong\; A\,\underbrace{a_1a_1a_2a_2a_3a_3}_{3\mathbb{RP}^2}\,B. \qquad\blacksquare$$
 
 ## 1.6 Orientation
 
@@ -353,6 +378,7 @@ Consider a compact surface $S$ and a path on $S$. Choose coordinate systems alon
 Using the formula for the Euler characteristic and the classification theorem:
 
 > **Theorem.** Let $S_1, S_2$ be compact surfaces. Then $S_1 \cong S_2$ iff
+>
 > 1. $\chi(S_1) = \chi(S_2)$, and
 > 2. they are both orientable or both non-orientable.
 
