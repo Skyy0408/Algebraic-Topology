@@ -2,6 +2,7 @@ site_name: Algebraic Topology
 site_description: Notes of a course in NTHU, 2026 Fall (Massey, A Basic Course in Algebraic Topology)
 site_url: https://skyy0408.github.io/Algebraic-Topology/
 repo_url: https://github.com/Skyy0408/Algebraic-Topology
+use_directory_urls: false   # keep raw <video src="assets/..."> paths valid
 theme:
   name: material
   palette:
