@@ -1,0 +1,7 @@
+# Manim 暫存輸出
+media/
+__pycache__/
+*.pyc
+# 原始照片不上傳
+raw/
+.DS_Store
