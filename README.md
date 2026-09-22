@@ -22,8 +22,15 @@ raw/                     手寫照片與預覽（不上傳）
 ```bash
 pip install manim
 cd animations/scenes
-manim -qh ch01_gluing.py Torus      # 輸出到 media/，再複製到 docs/assets/animations/
+# Cairo (CPU)：第 1 章黏合動畫
+manim -qh ch01_gluing.py Torus
+# OpenGL (GPU)：connected sum 動畫；有螢幕的電腦可直接 --renderer=opengl
+manim --renderer=opengl --write_to_movie -qh ch01_connected_sum.py TorusSumTorus
+# 無螢幕的伺服器：用 EGL 指定 GPU（MANIM_GPU=GPU 編號）
+MANIM_GPU=2 python ../tools/manim_gl.py --renderer=opengl --write_to_movie -qh ch01_connected_sum.py TorusSumTorus
 ```
+
+輸出在 `media/`，完成後複製到 `docs/assets/animations/`。
 
 ## 本機預覽網站
 

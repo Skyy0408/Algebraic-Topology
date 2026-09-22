@@ -146,6 +146,16 @@ $$
 S^2 \# S^2 \cong S^2, \qquad S^2 \# T^2 \cong T^2, \qquad T^2 \# T^2 \# T^2 .
 $$
 
+In the animations below, the left side cuts a disk at a vertex of each polygon (the new edge $c$) and glues the two polygons along $c$; the right side removes the disks $D_1, D_2$ and glues $\partial D_1$ to $\partial D_2$ (drawn as a collar tube).
+
+<video class="anim" src="assets/animations/TorusSumTorus.mp4" controls loop muted autoplay playsinline></video>
+
+$T^2 \# T^2$: the octagon $a_1b_1a_1^{-1}b_1^{-1}a_2b_2a_2^{-1}b_2^{-1}$, a surface of genus $2$.
+
+<video class="anim" src="assets/animations/SphereSumTorus.mp4" controls loop muted autoplay playsinline></video>
+
+$S^2 \# T^2 \cong T^2$: $S^2 \setminus D$ is a disk, so it simply caps the hole in $T^2 \setminus D$. In the word, $aba^{-1}b^{-1}dd^{-1}$ reduces to $aba^{-1}b^{-1}$ by folding the adjacent pair $dd^{-1}$.
+
 **Back to $\mathbb{RP}^2$.** Remove a disk $D$ from the center of the disk model of $\mathbb{RP}^2$. Cutting the remainder along a diameter and regluing gives a strip whose ends are glued with a twist:
 
 $$
@@ -164,6 +174,10 @@ $$
 **Example (Klein bottle).** The Klein bottle is the surface $K := \mathbb{RP}^2 \# \mathbb{RP}^2$.
 
 Since $\mathbb{RP}^2 \setminus D$ is a Möbius band, $K$ is a union of two Möbius bands.
+
+<video class="anim" src="assets/animations/ProjectivePlaneSum.mp4" controls loop muted autoplay playsinline></video>
+
+Each copy of $\mathbb{RP}^2 \setminus D$ is a Möbius band; gluing their boundary circles gives $K$ (shown as the figure-8 immersion, which passes through itself). In the polygon, $a_1a_1c$ and $a_2a_2c^{-1}$ glue to $a_1a_1a_2a_2$.
 
 Again, we can express $K$ as a polygon with edges properly identified: take $P_1 \cong \mathbb{RP}^2 \cong P_2$ (disks with boundaries $a_1a_1$ and $a_2a_2$), cut out the small disks $c_1, c_2$, and glue along $c$. After cutting along a diagonal and regluing, the result is the square in which one pair of opposite edges is identified with the same direction and the other pair with opposite directions.
 
