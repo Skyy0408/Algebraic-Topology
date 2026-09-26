@@ -28,3 +28,4 @@ extra_css:
 nav:
   - Home: index.md
   - "Ch. 1 Surfaces": ch01-surfaces.md
+  - "Ch. 2 Fundamental groups": ch02-fundamental-groups.md
