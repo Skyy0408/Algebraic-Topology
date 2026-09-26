@@ -69,7 +69,9 @@ $$
 
 Then $F(t,0) = f_0(t)$, $F(t,1) = f_1(t)$, $F(a,s) = f_0(a)$, $F(b,s) = f_0(b)$, so $f_0 \overset{F}{\sim} f_1$. We call this $F$ the *straight-line homotopy*.
 
-<!-- ANIM candidate: two paths in R^2 and the straight-line homotopy sweeping between them -->
+<video class="anim" src="assets/animations/StraightLineHomotopy.mp4" controls loop muted autoplay playsinline></video>
+
+Left: the parameter square, with the level line at height $s$. Right: the image in $X$; the endpoints stay fixed while the path sweeps from $f_0$ to $f_1$.
 
 ## 2.3 Reparametrization
 
@@ -191,8 +193,9 @@ $$
 
 Then $(f\cdot g)\cdot h \overset{F}{\sim} f\cdot(g\cdot h)$. $\blacksquare$
 
-<!-- FIG: the square with the three slanted strips f, g, h -->
-<!-- ANIM candidate: the reparametrization sliding the cut points from (1/4, 1/2) to (1/2, 3/4) -->
+<video class="anim" src="assets/animations/AssociativityReparam.mp4" controls loop muted autoplay playsinline></video>
+
+The image in $X$ never changes; only the way $[0,1]$ is shared between $f$, $g$ and $h$ does — the cuts slide from $\tfrac14, \tfrac12$ to $\tfrac12, \tfrac34$.
 
 ## 2.5 Constant paths and inverses
 
@@ -248,7 +251,9 @@ $$
 
 while $F(0,s) = f(0) = \varepsilon_{f(0)}(0)$ and $F(1,s) = f(0) = \varepsilon_{f(0)}(1)$. Hence $\varepsilon_{f(0)} \overset{F}{\sim} f\cdot\bar f$; similarly $\bar f \cdot f \sim \varepsilon_{f(1)}$. $\blacksquare$
 
-<!-- ANIM candidate: the loop f · f̄ retracting to the constant path -->
+<video class="anim" src="assets/animations/InversePath.mp4" controls loop muted autoplay playsinline></video>
+
+At level $s$ the path runs out along $f$ as far as $f(s)$, waits there, and comes back; as $s \to 0$ it retracts to the constant path $\varepsilon_{f(0)}$.
 
 ## 2.6 The fundamental group
 
@@ -307,5 +312,6 @@ $$
 
 Hence $\gamma_{\#}$ is a group isomorphism. $\blacksquare$
 
-<!-- FIG: a loop at x conjugated by the path gamma to a loop at y -->
-<!-- ANIM candidate: the conjugation gamma^{-1} · f · gamma sliding the base point from x to y -->
+<video class="anim" src="assets/animations/ChangeOfBasePoint.mp4" controls loop muted autoplay playsinline></video>
+
+The loop at $y$ runs $\gamma^{-1}$ to $x$, then the loop $f$, then $\gamma$ back to $y$.
