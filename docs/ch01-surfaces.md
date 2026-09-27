@@ -168,8 +168,9 @@ $$
 \mathbb{RP}^2 = \mathrm{MB} \cup_f D, \qquad f : \partial\mathrm{MB} \xrightarrow{\ \text{homeo}\ } \partial D, \quad \partial \mathrm{MB} \cong S^1 \cong \partial D.
 $$
 
-<!-- FIG: disk with hole → two strips → Möbius band -->
-<!-- ANIM candidate: RP^2 minus a disk becoming a Möbius band -->
+<video class="anim" src="assets/animations/ProjectivePlaneMinusDisk.mp4" controls loop muted autoplay playsinline></video>
+
+Cut the annulus along a diameter, straighten the two halves and glue them along $a$ (the antipodal identification). The two ends then carry the cuts $p$, $q$ crosswise, which is exactly a Möbius band.
 
 **Example (Klein bottle).** The Klein bottle is the surface $K := \mathbb{RP}^2 \# \mathbb{RP}^2$.
 
@@ -190,7 +191,9 @@ As with $\mathbb{RP}^2$, $K$ does not embed in $\mathbb{R}^3$; the animation sho
 
 To express $K$ as gluing two Möbius bands: cut the Klein-bottle square along two horizontal lines $c, d$. The middle strip (edges $c$, $d$, sides $b$, $b$) is a Möbius band; the top and bottom strips glue along $a$ into another Möbius band (edges $d$, $c$, sides $e, f$).
 
-<!-- FIG: Klein bottle square cut into two Möbius bands -->
+<video class="anim" src="assets/animations/KleinTwoMobius.mp4" controls loop muted autoplay playsinline></video>
+
+The middle strip has its two $b$ sides glued with a flip, so it is a Möbius band; the top and bottom strips glue to each other along $a$ into a second one, with $e$, $f$ crosswise at its ends.
 
 **Facts.**
 
@@ -349,8 +352,9 @@ In a word, a pair of edges is of the
 
     $$A\,a\,B\,b^{-1}\,C\,a^{-1}\,D\,b\,E \;\longrightarrow\; A\,a\,c\,a^{-1}\,D\,C\,c^{-1}\,B\,E \;\longrightarrow\; A\,D\,C\,d\,c\,d^{-1}\,c^{-1}\,B\,E.$$
 
-<!-- FIG: surgery steps 1–4 -->
-<!-- ANIM candidate: step 3 and step 4 cut-and-glue -->
+<video class="anim" src="assets/animations/SurgeryPairsAdjacent.mp4" controls loop muted autoplay playsinline></video>
+
+Step 3 in detail: cut along $a$, then glue the two $b$ edges; the pair $a\,a$ ends up adjacent.
 
 **Lemma.** $T^2 \# \mathbb{RP}^2 \cong 3\mathbb{RP}^2$.
 
