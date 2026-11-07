@@ -30,3 +30,5 @@ nav:
   - "Ch. 1 Surfaces": ch01-surfaces.md
   - "Ch. 2 Fundamental groups": ch02-fundamental-groups.md
   - "Ch. 3 Free groups and free products": ch03-free-groups.md
+  - "Ch. 4 The Seifert–Van Kampen theorem": ch04-van-kampen.md
+  - "Ch. 5 Covering spaces": ch05-covering-spaces.md
