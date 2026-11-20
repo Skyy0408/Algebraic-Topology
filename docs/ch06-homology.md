@@ -4,8 +4,8 @@ title: "Chapter 6. Introduction to homology theory"
 
 # Chapter 6. Introduction to homology theory
 
-Source: lecture notes provided by the instructor (week of 2026-11-12; Massey,
-Chapters VI–VII).
+Source: lecture notes provided by the instructor (weeks of 2026-11-12 and 2026-11-19;
+Massey, Chapters VI–VII).
 
 !!! note "What homology is for (Massey §VI.2)"
     Homology assigns to every space $X$ abelian groups $H_0(X),H_1(X),H_2(X),\dots$
@@ -334,4 +334,193 @@ $$
 \xrightarrow{\ \partial_*\ }\cdots
 $$
 
-(the exact homology sequence of the pair, Massey §VII.5).
+It is called the **homology sequence of the pair $(X,A)$**. The maps $i_*,j_*$ are
+induced by $i_\#,j_\#$; the *connecting homomorphism* $\partial_*$ is defined below.
+
+## 6.6 The connecting homomorphism $\partial_*$
+
+Let $u\in H_n(X,A)=Z_n(X,A)/B_n(X,A)$.
+
+$$
+\begin{aligned}
+&\Rightarrow\ u=u'+B_n(X,A),\qquad u'\in Z_n(X,A)\subseteq C_n(X,A)=C_n(X)/C_n(A),\\
+&\Rightarrow\ u'=u''+C_n(A),\qquad u''\in C_n(X),\ \text{ i.e. } j_\#(u'')=u',\\
+&B_{n-1}(X,A)\ni 0=\partial_nu'=\partial_nu''+C_{n-1}(A)\\
+&\Rightarrow\ \partial_nu''\in C_{n-1}(A),\qquad \partial_nu''\in Z_{n-1}(A)\quad(\text{since }\partial_{n-1}\partial_nu''=0).
+\end{aligned}
+$$
+
+Define
+
+$$
+\partial_*u:=\partial_nu''+B_{n-1}(A)\ \in\ H_{n-1}(A).
+$$
+
+**Exercise.** The definition of $\partial_*u$ is independent of the choices of $u'$ and $u''$.
+
+In the diagram of §6.5: start at $u'$ in the top right, lift along $j_\#$ to $u''$, go down
+by $\partial_n$, and the result comes back along $i_\#$ from $C_{n-1}(A)$.
+
+<video class="anim" src="assets/animations/ConnectingHomomorphism.mp4" controls loop muted autoplay playsinline></video>
+
+Geometrically: a relative cycle is a chain whose boundary lies in $A$, and $\partial_*$
+takes that boundary. For example, for $(X,A)=(D^2,S^1)$, the disc itself is a relative
+2-cycle and $\partial_*$ sends it to the circle:
+
+<video class="anim" src="assets/animations/RelativeCycleDisk.mp4" controls loop muted autoplay playsinline></video>
+
+## 6.7 Exact sequences
+
+> **Definition.** A sequence of groups $G_i$ and homomorphisms $f_i$
+>
+> $$
+> \cdots\to G_1\xrightarrow{f_1}G_2\xrightarrow{f_2}G_3\xrightarrow{f_3}G_4\xrightarrow{f_4}\cdots
+> $$
+>
+> is *exact* if $\operatorname{im}f_i=\ker f_{i+1}$ for all $i$.
+
+A *short exact sequence* is an exact sequence of the form
+
+$$
+0\xrightarrow{\ a\ }G_1\xrightarrow{f_1}G_2\xrightarrow{f_2}G_3\xrightarrow{\ b\ }0 .
+$$
+
+A *long exact sequence* is an exact sequence of the form
+
+$$
+\cdots\xrightarrow{f_{-4}}G_{-3}\xrightarrow{f_{-3}}G_{-2}\xrightarrow{f_{-2}}G_{-1}\xrightarrow{f_{-1}}G_0\xrightarrow{f_0}G_1\xrightarrow{f_1}G_2\to\cdots
+$$
+
+When only finitely many $G_i$ are nontrivial, write it as
+
+$$
+0\to G_n\xrightarrow{f_n}G_{n+1}\xrightarrow{f_{n+1}}G_{n+2}\to\cdots\xrightarrow{f_{m-1}}G_m\to0 .
+$$
+
+> **Proposition** (from algebra, e.g. Lang, *Algebra*, p. 40). Let $A\xrightarrow{f}A'$ be
+> a surjective homomorphism of abelian groups, and $A'$ free. Then
+> $A\cong A'\oplus\ker f$.
+
+> **Theorem.** Let $0\to G_1\xrightarrow{f}G_2\xrightarrow{g}G_3\to0$ be a short exact
+> sequence of abelian groups. Suppose $G_3$ is free. Then $G_2\cong G_1\oplus G_3$.
+>
+> In this case we say the short exact sequence *splits*.
+
+*Proof.* Clearly $f$ is 1–1 and $g$ is onto. By the proposition above,
+
+$$
+G_2\cong G_3\oplus\ker g=G_3\oplus\operatorname{im}f\cong G_3\oplus G_1\cong G_1\oplus G_3 .
+\qquad\blacksquare
+$$
+
+## 6.8 Reduced homology
+
+The *augmentation* $\varepsilon:C_0(X)\to\mathbb{Z}$ is defined by $\varepsilon(T)=1$ for
+every 0-cube $T$, extended linearly:
+
+$$
+\varepsilon\Big(\sum_in_iT_i\Big)=\sum_in_i,\qquad
+\cdots\to C_1(X)\xrightarrow{\partial_1}C_0(X)\xrightarrow{\ \varepsilon\ }\mathbb{Z}.
+$$
+
+**Note.** $\varepsilon\circ\partial_1=0$: for a path $T$ from $p$ to $q$,
+$\varepsilon\partial_1(T)=\varepsilon(q-p)=1-1=0$.
+
+Replacing $\partial_0$ by $\varepsilon$, we get another sequence of homology groups; the only
+difference is in degree $0$:
+
+$$
+\tilde H_0(X):=\ker\varepsilon/\operatorname{im}\partial_1\ \subseteq\ C_0(X)/\operatorname{im}\partial_1=H_0(X),
+\qquad
+\tilde Z_0(X):=\ker\varepsilon,\quad \tilde B_0(X):=\operatorname{im}\partial_1,\quad
+\tilde H_0(X)=\tilde Z_0/\tilde B_0 .
+$$
+
+Since $\varepsilon(B_0(X))=0$, $\varepsilon$ induces $\varepsilon_*:H_0(X)\to\mathbb{Z}$, and we
+get
+
+$$
+0\to\tilde H_0(X)\xrightarrow{\ \xi\ }H_0(X)\xrightarrow{\ \varepsilon_*\ }\mathbb{Z}\to0,
+\qquad \xi=\text{inclusion}.
+$$
+
+> **Theorem.** For $X\neq\emptyset$ the sequence above is exact and splits.
+
+*Proof.* Clearly $\xi$ is 1–1, and $\varepsilon_*$ is onto (a single 0-cube maps to $1$).
+We need $\operatorname{im}\xi=\ker\varepsilon_*$:
+
+$$
+\varepsilon_*\big(u+B_0(X)\big)=0\iff\varepsilon(u)=0\iff u\in\ker\varepsilon=\tilde Z_0
+\iff u+B_0=u+\tilde B_0\in\tilde H_0(X)=\operatorname{im}\xi .
+$$
+
+$\mathbb{Z}$ is free, so the sequence splits. $\blacksquare$
+
+> **Corollary.** $H_0(X)\cong\tilde H_0(X)\oplus\mathbb{Z}$.
+
+Let $\tilde H_n(X)=H_n(X)$ for $n\neq0$. $\{\tilde H_n(X)\}_{n\in\mathbb{Z}}$ is the sequence of
+**reduced homology groups**. (Massey §VII.2.3, p. 161.)
+
+## 6.9 Back to relative homology
+
+> **Theorem.** If $f,g:(X,A)\to(Y,B)$ are maps of topological pairs and $f\simeq g$, then
+> $f_*=g_*:H_n(X,A)\to H_n(Y,B)$ for all $n$.
+
+*Proof.* Similar to the case $H_n(X)\to H_n(Y)$ (§6.4). $\blacksquare$
+
+> **Theorem.** If $f:(X,A)\to(Y,B)$ is a homotopy equivalence, then
+> $f_*:H_n(X,A)\to H_n(Y,B)$ is an isomorphism for all $n\in\mathbb{Z}$.
+
+> **Five Lemma** (Steenrod). Suppose the diagram
+>
+> $$
+> \begin{array}{ccccccccc}
+> A_1 & \xrightarrow{i_1} & A_2 & \xrightarrow{i_2} & A_3 & \xrightarrow{i_3} & A_4 & \xrightarrow{i_4} & A_5\\
+> \big\downarrow{\scriptstyle f_1} & & \big\downarrow{\scriptstyle f_2} & & \big\downarrow{\scriptstyle f_3} & & \big\downarrow{\scriptstyle f_4} & & \big\downarrow{\scriptstyle f_5}\\
+> B_1 & \xrightarrow{j_1} & B_2 & \xrightarrow{j_2} & B_3 & \xrightarrow{j_3} & B_4 & \xrightarrow{j_4} & B_5
+> \end{array}
+> $$
+>
+> commutes, where the $A_i,B_i$ are groups, the $f_i,i_i,j_i$ are homomorphisms, and each row
+> is exact. Then
+>
+> 1. $f_2,f_4$ 1–1 and $f_1$ onto $\Rightarrow$ $f_3$ is 1–1;
+> 2. $f_2,f_4$ onto and $f_5$ 1–1 $\Rightarrow$ $f_3$ is onto.
+>
+> In particular, if $f_1,f_2,f_4,f_5$ are isomorphisms, so is $f_3$.
+
+The groups need not be abelian; we write them multiplicatively, with identity $1$.
+
+*Proof of (1).* Let $x\in\ker f_3$, i.e. $f_3(x)=1$.
+
+$$
+\begin{aligned}
+&\Rightarrow\ 1=j_3(f_3(x))=f_4(i_3(x))\ \Rightarrow\ i_3(x)=1 &&(f_4\ \text{1–1})\\
+&\Rightarrow\ x\in\ker i_3=\operatorname{im}i_2\ \Rightarrow\ \exists\,y\in A_2:\ i_2(y)=x
+ \ \Rightarrow\ j_2(f_2(y))=f_3(i_2(y))=1\\
+&\Rightarrow\ f_2(y)\in\ker j_2=\operatorname{im}j_1\ \Rightarrow\ \exists\,z\in B_1:\ j_1(z)=f_2(y)\\
+&f_1\ \text{onto}\ \Rightarrow\ \exists\,w\in A_1:\ f_1(w)=z\\
+&f_2(i_1(w))=j_1(f_1(w))=j_1(z)=f_2(y)\ \Rightarrow\ y=i_1(w) &&(f_2\ \text{1–1})\\
+&\Rightarrow\ y\in\operatorname{im}i_1=\ker i_2\ \Rightarrow\ 1=i_2(y)=x .
+\end{aligned}
+$$
+
+$\therefore f_3$ is 1–1.
+
+<video class="anim" src="assets/animations/FiveLemmaInjective.mp4" controls loop muted autoplay playsinline></video>
+
+*Proof of (2).* Let $x\in B_3$.
+
+$$
+\begin{aligned}
+&f_4\ \text{onto}\ \Rightarrow\ \exists\,y\in A_4:\ f_4(y)=j_3(x)\\
+&\Rightarrow\ f_5(i_4(y))=j_4(f_4(y))=j_4(j_3(x))=1\ \Rightarrow\ i_4(y)=1 &&(f_5\ \text{1–1})\\
+&\Rightarrow\ y\in\ker i_4=\operatorname{im}i_3\ \Rightarrow\ \exists\,z\in A_3:\ i_3(z)=y\\
+&j_3\big(f_3(z)^{-1}x\big)=j_3(f_3(z))^{-1}j_3(x)=f_4(i_3(z))^{-1}f_4(y)=f_4(y)^{-1}f_4(y)=1\\
+&\Rightarrow\ f_3(z)^{-1}x\in\ker j_3=\operatorname{im}j_2\ \Rightarrow\ \exists\,w\in B_2:\ j_2(w)=f_3(z)^{-1}x\\
+&\Rightarrow\ \exists\,u\in A_2:\ f_2(u)=w &&(f_2\ \text{onto})\\
+&\Rightarrow\ f_3\big(z\cdot i_2(u)\big)=f_3(z)\,f_3(i_2(u))=f_3(z)\,j_2(f_2(u))=f_3(z)\,j_2(w)=f_3(z)f_3(z)^{-1}x=x .
+\end{aligned}
+$$
+
+$\therefore f_3$ is onto. $\blacksquare$
